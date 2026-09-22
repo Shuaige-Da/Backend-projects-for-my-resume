@@ -6,9 +6,17 @@
 
 ## 页面预览
 
-数据分析看板 | 中文 API 文档
---- | ---
-![数据分析看板](docs/images/dashboard.png) | ![中文 API 文档](docs/images/api-docs.png)
+### 数据分析看板
+
+![数据分析看板](docs/images/dashboard.png)
+
+### 数据质量与处理审计
+
+![数据质量与处理审计](docs/images/data-quality.png)
+
+### 中文 API 文档
+
+![中文 API 文档](docs/images/api-docs.png)
 
 ## 为什么不是直接 `pandas.read_csv()`
 

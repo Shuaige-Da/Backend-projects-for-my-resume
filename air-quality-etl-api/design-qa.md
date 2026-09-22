@@ -23,7 +23,8 @@
 
 ## 运行证据
 
-- 正式看板截图：`docs/images/dashboard.png`
+- 数据分析看板截图：`docs/images/dashboard.png`
+- 数据质量与处理审计截图：`docs/images/data-quality.png`
 - 中文 API 文档截图：`docs/images/api-docs.png`
 - 前端生产构建：通过。
 - 后端单元与契约测试：21 passed，2 skipped。
