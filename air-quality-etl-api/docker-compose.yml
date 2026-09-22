@@ -1,0 +1,43 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${DB_NAME:-air_quality}
+      POSTGRES_USER: ${DB_USER:-air_quality}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-change_me}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-air_quality} -d ${DB_NAME:-air_quality}"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  api:
+    build: .
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-air_quality}
+      DB_USER: ${DB_USER:-air_quality}
+      DB_PASSWORD: ${DB_PASSWORD:-change_me}
+      AQI_DATA_DIR: /data/aqi
+    ports:
+      - "8000:8000"
+    volumes:
+      - "${AQI_HOST_DATA_DIR:-../AQX_P_488_Resource}:/data/aqi:ro"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:

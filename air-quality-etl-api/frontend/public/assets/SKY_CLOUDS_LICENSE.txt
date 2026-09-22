@@ -1,0 +1,4 @@
+Asset: sky-clouds.jpg
+Source: https://commons.wikimedia.org/wiki/File:BlueSkyWhiteClouds27.jpg
+Author: Raysonho @ Open Grid Scheduler / Grid Engine
+License: Creative Commons CC0 1.0 Universal Public Domain Dedication

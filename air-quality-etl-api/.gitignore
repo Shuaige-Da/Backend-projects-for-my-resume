@@ -1,0 +1,25 @@
+venv/
+env/
+.venv/
+
+.env
+
+data/
+# Checkpoints de Jupyter
+.ipynb_checkpoints/
+
+dashboard/*.pbix
+
+logs/
+
+offset.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDEs
+.vscode/
+.idea/

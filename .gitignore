@@ -1,25 +1,39 @@
-.venv/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.ruff_cache/
-.coverage
-coverage.xml
-htmlcov/
-.env
-.env.*
-!.env.example
-!.env.local.example
-.local-dev-secret-key
-app.db
-app.db-*
-*.sqlite
-*.sqlite3
-*.log
-instance/
-frontend/static/uploads/*
-!frontend/static/uploads/.gitkeep
-.idea/
-.vscode/
-.DS_Store
-Thumbs.db
+# Secrets and local configuration
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.local.example
+**/.local-dev-secret-key
+
+# Python
+**/.venv/
+**/venv/
+**/env/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.ruff_cache/
+**/.coverage
+**/coverage.xml
+**/htmlcov/
+
+# JavaScript
+**/node_modules/
+**/dist/
+
+# Runtime data
+**/data/
+**/logs/
+**/*.log
+**/*.db
+**/*.db-*
+**/*.sqlite
+**/*.sqlite3
+**/instance/
+**/offset.txt
+
+# Editors and operating systems
+**/.idea/
+**/.vscode/
+**/.DS_Store
+**/Thumbs.db
